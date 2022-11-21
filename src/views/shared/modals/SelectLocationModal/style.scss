@@ -1,0 +1,33 @@
+.selectLocationModal {
+  .modalContent {
+    width: 100%;
+    min-height: 540px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    .mapContainer {
+      width: 100%;
+      min-height: 500px;
+      border-radius: 16px;
+    }
+  }
+  .ant-modal-footer {
+    padding-top: 0;
+    border-top: 0;
+    .modalFooter {
+      .saveButton {
+        width: 85px;
+        height: 48px;
+        border-radius: 4px;
+        gap: 12px;
+        background-color: #18397A;
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.listOfLocationsModal {
+  width: 100%;
+  .modalContent {
+    overflow-y: auto;
+    .row {
+      min-width: 550px;
+      display: flex;
+      justify-content: space-between;
+      .text {
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        color: #212121;
+        line-height: 20px;
+        margin: 10px;
+      }
+      .key {
+        font-weight: 600;
+      }
+      .value {
+        font-weight: 500;
+      }
+    }
+  }
+}

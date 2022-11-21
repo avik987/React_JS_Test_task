@@ -1,0 +1,12 @@
+const namespace = 'locations';
+
+export const FETCH_USER_IP_ADDRESS_REQUEST = `${namespace}/FETCH_USER_IP_ADDRESS_REQUEST`;
+export const FETCH_USER_IP_ADDRESS_SUCCESS = `${namespace}/FETCH_USER_IP_ADDRESS_SUCCESS`;
+
+export const FETCH_LOCATIONS_BY_USER_IP_REQUEST = `${namespace}/FETCH_LOCATIONS_BY_USER_IP_REQUEST`;
+export const FETCH_LOCATIONS_BY_USER_IP_SUCCESS = `${namespace}/FETCH_LOCATIONS_BY_USER_IP_SUCCESS`;
+
+export const SAVE_LOCATION_REQUEST = `${namespace}/SAVE_LOCATION_REQUEST`;
+
+export const SET_POSITION = `${namespace}/SET_POSITION`;
+export const SET_LOCATIONS_REQUEST_LOADER = `${namespace}/SET_LOCATIONS_REQUEST_LOADER`;

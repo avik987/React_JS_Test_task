@@ -1,0 +1,28 @@
+.showErrorModal {
+  .modalContent {
+    width: 100%;
+    height: 100%;
+    .message {
+      font-family: Montserrat, sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #212121;
+    }
+  }
+  .footer {
+    border: none;
+    .footerButton {
+      width: 66px;
+      height: 48px;
+      border-radius: 4px;
+      gap: 12px;
+      background-color: #18397A;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+}

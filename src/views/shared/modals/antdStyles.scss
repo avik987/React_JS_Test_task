@@ -1,0 +1,30 @@
+.ant-modal-content {
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  .ant-modal-close-x {
+    .anticon {
+      width: 14px;
+      height: 14px;
+      color: #212121;
+    }
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    border-radius: 12px;
+    .ant-modal-title {
+      line-height: 36px;
+      font-size: 24px;
+      font-weight: 600;
+      font-family: Montserrat, sans-serif;
+      color: #212121;
+    }
+  }
+  .ant-modal-body {
+    padding: 24px;
+  }
+  .ant-modal-footer {
+    border: none;
+  }
+}

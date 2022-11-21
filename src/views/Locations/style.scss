@@ -1,0 +1,39 @@
+.locationsPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    border-radius: 4px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    gap: 12px;
+    cursor: pointer;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .openMapButton {
+      width: 133px;
+      height: 38px;
+      background-color: #18397A;
+      color: #FFFFFF;
+      border: none;
+    }
+    .showLocationsButton {
+      margin-top: 20px;
+      width: 198px;
+      height: 48px;
+      color: #18397A;
+      border: 1px solid #18397A;
+      background-color: #F4F4F4;
+    }
+  }
+}
