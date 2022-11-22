@@ -1,19 +1,15 @@
 import { useEffect, useMemo } from "react";
 import { useMap } from "react-leaflet/hooks";
-import {useDispatch, useSelector} from "react-redux";
-import { setPosition } from "state/locations/actions";
 
-function useContainer() {
+function useContainer({ onChangeLocation, showCurrenPosition }) {
     const map = useMap();
-    const dispatch = useDispatch();
-    const { position } = useSelector(({locations}) => locations);
 
     /**
      * Marker event handler
      */
     const markerEventHandler = useMemo(() => ({
             dragend (event) {
-                dispatch(setPosition(event.target.getLatLng()));
+                onChangeLocation(event.target.getLatLng());
             },
         }),
         [],
@@ -23,11 +19,14 @@ function useContainer() {
      * On map update handler
      */
     const onMapUpdateHandler = () => {
+        map.invalidateSize();
+
+        if (!showCurrenPosition) return;
+
         map.locate().on("locationfound", function (event) {
-            dispatch(setPosition(event.latlng))
+            onChangeLocation(event.latlng);
             map.flyTo(event.latlng, map.getZoom());
         });
-        map.invalidateSize();
     };
 
     /**
@@ -36,7 +35,6 @@ function useContainer() {
     useEffect(onMapUpdateHandler, [map]);
 
     return {
-        position,
         markerEventHandler,
     }
 }

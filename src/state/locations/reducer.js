@@ -1,9 +1,7 @@
 import * as types from "state/locations/types";
-import { DEFAULT_LOCATION } from "constants/globals";
 
 const initialState = {
     userIpAddress: '',
-    position: DEFAULT_LOCATION,
     locationList: [],
     loader: false,
 };
@@ -14,11 +12,6 @@ const locationReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userIpAddress: action.ipAddress,
-            }
-        case types.SET_POSITION:
-            return {
-                ...state,
-                position: action.position,
             }
         case types.FETCH_LOCATIONS_BY_USER_IP_REQUEST:
             return {

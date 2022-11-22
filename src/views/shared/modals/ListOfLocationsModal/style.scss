@@ -1,23 +1,57 @@
 .listOfLocationsModal {
-  width: 100%;
   .modalContent {
     overflow-y: auto;
+    max-height: 500px;
     .row {
+      width: 100%;
       min-width: 550px;
       display: flex;
       justify-content: space-between;
-      .text {
-        font-family: Montserrat, sans-serif;
-        font-size: 16px;
-        color: #212121;
-        line-height: 20px;
-        margin: 10px;
+      align-items: center;
+      .button {
+        cursor: pointer;
+        border: none;
+        //box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
       }
-      .key {
-        font-weight: 600;
+      .item {
+        width: 220px;
+        .text {
+          font-family: Montserrat, sans-serif;
+          font-size: 16px;
+          color: #212121;
+          line-height: 20px;
+          margin: 10px;
+        }
+        .key {
+          font-weight: 600;
+        }
+        .ipKey {
+          margin-left: 75px;
+        }
+        .value {
+          font-weight: 500;
+        }
       }
-      .value {
-        font-weight: 500;
+      .ipAddress {
+        width: 170px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listOfLocationsModal {
+    .modalContent {
+      .row {
+        .item {
+          width: 175px;
+          .text {
+            font-size: 13px;
+          }
+        }
+        .ipAddress {
+          width: 120px;
+        }
       }
     }
   }

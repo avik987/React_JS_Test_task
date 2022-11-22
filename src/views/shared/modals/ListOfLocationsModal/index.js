@@ -1,20 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Empty, Modal } from "antd";
+import { Button, Empty, Modal } from "antd";
 import { isEmpty } from "lodash";
 
+import LocationMarkerIcon from "assets/svg/LocationMarkerIcon";
 import useContainer from "./hook";
 import "antd/dist/antd.min.css";
 import "../antdStyles.scss";
 import "./style.scss";
 
 const ListOfLocationsModal = ({ onClose }) => {
-    const { locationList } = useContainer();
+    const { locationList, handleShowMap } = useContainer();
 
     return (
         <Modal
             open
-            width={600}
+            width={750}
             onCancel={onClose}
             centered
             mask={false}
@@ -25,16 +26,19 @@ const ListOfLocationsModal = ({ onClose }) => {
             <div className='modalContent'>
                 {!isEmpty(locationList) ? (
                     <>
-                        <div className='row'>
-                            <p className='text key'>Ip</p>
-                            <p className='text key'>Coord_x</p>
-                            <p className='text key'>Coord_y</p>
+                        <div className='row titleRow'>
+                            <span className='item'><p className='text key ipKey'>Ip</p></span>
+                            <span className='item'><p className='text key'>Coord_x</p></span>
+                            <span className='item'><p className='text key'>Coord_y</p></span>
                         </div>
                         {locationList.map(({id, ip, coord_x, coord_y}) => (
                             <div className='row' key={id}>
-                                <p className='text value'>{ip}</p>
-                                <p className='text value'>{coord_x}</p>
-                                <p className='text value'>{coord_y}</p>
+                                <Button className='button' onClick={() => handleShowMap(coord_x, coord_y)}>
+                                    <LocationMarkerIcon width={18} height={18} />
+                                </Button>
+                                <span className='item ipAddress'><p className='text value'>{ip}</p></span>
+                                <span className='item'><p className='text value'>{coord_x}</p></span>
+                                <span className='item'><p className='text value'>{coord_y}</p></span>
                             </div>
                         ))}
                     </>

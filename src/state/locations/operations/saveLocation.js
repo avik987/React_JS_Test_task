@@ -8,13 +8,13 @@ const saveLocation = createLogic({
     type: SAVE_LOCATION_REQUEST,
     latest: true,
 
-    async process({ httpClient, getState }, dispatch, done) {
-        const { locations: { userIpAddress, position } } = getState();
+    async process({ httpClient, getState, action }, dispatch, done) {
+        const { locations: { userIpAddress } } = getState();
 
         const body = {
             ip: userIpAddress,
-            coord_x: position.lat,
-            coord_y: position.lng,
+            coord_x: action.location.lat,
+            coord_y: action.location.lng,
         };
 
         try {

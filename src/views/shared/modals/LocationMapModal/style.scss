@@ -1,4 +1,10 @@
 .selectLocationModal {
+  .header {
+    display: flex;
+    .backButton {
+      margin-right: 20px;
+    }
+  }
   .modalContent {
     width: 100%;
     min-height: 540px;

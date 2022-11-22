@@ -13,7 +13,10 @@ function useContainer() {
      */
     const showLocationModal = useCallback(() => {
         dispatch(showModal({
-            modalType: 'SELECT_LOCATION_MODAL',
+            modalType: 'LOCATION_MAP_MODAL',
+            modalProps: {
+                draggable: true,
+            }
         }));
     }, []);
 

@@ -9,11 +9,6 @@ export const setUserIpAddress = (ipAddress) => ({
     ipAddress,
 });
 
-export const setPosition = (position) => ({
-    type: types.SET_POSITION,
-    position,
-});
-
 export const fetchLocationsByUserIp = () => ({
     type: types.FETCH_LOCATIONS_BY_USER_IP_REQUEST,
 });
@@ -23,8 +18,9 @@ export const setLocationsByUserIp = (locationList) => ({
     locationList,
 });
 
-export const saveLocation = () => ({
+export const saveLocation = (location) => ({
     type: types.SAVE_LOCATION_REQUEST,
+    location,
 });
 
 export const setLocationsRequestLoader = (value) => ({
